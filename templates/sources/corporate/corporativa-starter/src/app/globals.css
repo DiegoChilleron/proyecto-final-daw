@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/* ============================================
+   VARIABLES CSS - Colores dinámicos desde ENV
+   (Los valores principales se inyectan desde layout.tsx)
+   ============================================ */
+
+:root {
+  --primary-color: #2563EB;
+  --secondary-color: #1E40AF;
+  --background: #ffffff;
+  --background-dark: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.corporate {
+  @apply min-h-screen;
+}
+
+/* ============================================
+   HEADER / NAVEGACION
+   ============================================ */
+
+.header {
+  @apply fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm;
+}
+
+.header__container {
+  @apply max-w-6xl mx-auto px-6 py-4 flex items-center justify-between;
+}
+
+.header__logo {
+  @apply text-xl font-bold;
+  color: var(--primary-color);
+}
+
+.header__logo-img {
+  @apply h-10 w-auto object-contain;
+}
+
+.header__nav {
+  @apply hidden md:flex items-center gap-6;
+}
+
+.header__link {
+  @apply text-slate-600 hover:text-slate-900 transition-colors;
+}
+
+.header__cta {
+  @apply px-4 py-2 rounded-lg text-white font-medium transition-colors;
+  background-color: var(--primary-color);
+}
+
+.header__cta:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  @apply pt-32 pb-20 text-center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.hero__container {
+  @apply max-w-4xl mx-auto px-6;
+}
+
+.hero__title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6;
+}
+
+.hero__subtitle {
+  @apply text-xl md:text-2xl text-white/90 mb-8;
+}
+
+.hero__cta {
+  @apply inline-block px-8 py-4 bg-white rounded-lg font-semibold text-lg transition-transform hover:scale-105;
+  color: var(--primary-color);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about {
+  @apply py-20;
+  background-color: var(--background-dark);
+}
+
+.about__container {
+  @apply max-w-4xl mx-auto px-6 text-center;
+}
+
+.about__title {
+  @apply text-3xl font-bold mb-6;
+  color: var(--primary-color);
+}
+
+.about__text {
+  @apply text-lg text-slate-600 leading-relaxed;
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+
+.services {
+  @apply py-24;
+}
+
+.services__container {
+  @apply max-w-5xl mx-auto px-6;
+}
+
+.services__title {
+  @apply text-3xl font-bold text-center mb-16;
+  color: var(--primary-color);
+}
+
+.services__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.services__item {
+  @apply p-8 bg-slate-100 transition-all duration-300 text-center;
+}
+
+.services__item:hover {
+  background-color: var(--primary-color);
+}
+
+.services__item:hover .services__icon {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.services__item:hover .services__name {
+  color: white;
+}
+
+.services__icon {
+  @apply w-12 h-12 mx-auto mb-5 rounded-lg flex items-center justify-center transition-colors duration-300;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.services__name {
+  @apply text-lg font-medium text-slate-800 transition-colors duration-300;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.contact {
+  @apply py-20;
+  background-color: var(--background-dark);
+}
+
+.contact__container {
+  @apply max-w-4xl mx-auto px-6 text-center;
+}
+
+.contact__title {
+  @apply text-3xl font-bold mb-8;
+  color: var(--primary-color);
+}
+
+.contact__info {
+  @apply flex flex-col md:flex-row justify-center items-center gap-8 mb-8;
+}
+
+.contact__item {
+  @apply flex items-center gap-3 text-slate-600;
+}
+
+.contact__icon {
+  @apply w-10 h-10 rounded-full flex items-center justify-center text-white;
+  background-color: var(--secondary-color);
+}
+
+.contact__social {
+  @apply flex justify-center gap-4;
+}
+
+.contact__social-link {
+  @apply p-3 rounded-full text-white transition-transform hover:scale-110;
+  background-color: var(--primary-color);
+}
+
+.contact__social-link:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  @apply py-8 text-center text-slate-500 text-sm;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.footer__text {
+  @apply opacity-80;
+}

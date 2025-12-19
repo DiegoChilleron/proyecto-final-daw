@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ============================================
+   VARIABLES CSS - Colores dinámicos desde ENV
+   (Los valores principales se inyectan desde layout.tsx)
+   ============================================ */
+
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #1E40AF;
+  --background: #0f172a;
+  --background-light: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+
+body {
+  background: var(--primary-color);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.portfolio {
+  @apply min-h-screen;
+}
+
+.portfolio__container {
+  @apply max-w-4xl mx-auto px-6 py-16;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  @apply flex flex-col items-center text-center py-20;
+}
+
+.hero__avatar {
+  @apply w-32 h-32 rounded-full flex items-center justify-center text-4xl font-bold text-white mb-6 shadow-lg;
+  background-color: var(--secondary-color);
+}
+
+.hero__name {
+  @apply text-4xl md:text-5xl font-bold mb-2 text-white;
+}
+
+.hero__profession {
+  @apply text-xl md:text-2xl text-slate-400 mb-4;
+}
+
+.hero__bio {
+  @apply max-w-2xl text-slate-400 text-lg leading-relaxed mb-8;
+}
+
+.hero__social {
+  @apply flex gap-4;
+}
+
+.hero__social-link {
+  @apply p-3 rounded-full bg-slate-800 text-slate-300 transition-all duration-300 hover:scale-110 hover:text-white;
+}
+
+.hero__social-link:hover {
+  background-color: var(--primary-color);
+}
+
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+
+.skills {
+  @apply py-16;
+}
+
+.skills__title {
+  @apply text-2xl font-bold text-center mb-8;
+}
+
+.skills__grid {
+  @apply flex flex-wrap justify-center gap-3;
+}
+
+.skills__item {
+  @apply px-4 py-2 bg-slate-800 rounded-full text-slate-300 text-sm font-medium transition-colors duration-300 hover:text-white;
+}
+
+.skills__item:hover {
+  background-color: var(--primary-color);
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.contact {
+  @apply py-16 text-center;
+}
+
+.contact__title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.contact__text {
+  @apply text-slate-400 mb-6;
+}
+
+.contact__links {
+  @apply flex flex-col sm:flex-row items-center justify-center gap-4;
+}
+
+.contact__link {
+  @apply flex items-center gap-2 px-6 py-3 rounded-lg text-white transition-colors duration-300;
+  background-color: var(--secondary-color);
+}
+
+.contact__link:hover {
+  background-color: color-mix(in srgb, var(--secondary-color) 70%, transparent);
+}
+
+.contact__link--primary {
+  @apply text-white;
+  background-color: var(--secondary-color);
+}
+
+.contact__link--primary:hover {
+  background-color: color-mix(in srgb, var(--secondary-color) 70%, transparent);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  @apply py-8 text-center text-slate-500 text-sm border-t border-slate-800;
+}

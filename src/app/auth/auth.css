@@ -1,0 +1,76 @@
+@import "../globals.css";
+
+
+/* Pagina autenticacion */
+
+
+.auth {
+  @apply py-20;
+}
+
+.auth__container {
+  @apply flex justify-center;
+}
+
+.auth__wrapper {
+  @apply w-full sm:w-[350px] px-10;
+}
+
+.auth__tabs {
+  @apply flex justify-around w-full gap-4;
+}
+
+.auth__tab-button {
+  @apply bg-gray-200 px-5 py-2 rounded-lg font-bold transition-colors dark:bg-primary-800 dark:text-secondary;
+}
+.auth__tab-button--active {
+  @apply bg-gray-600 text-white dark:bg-accent;
+}
+
+.auth__title {
+  @apply text-2xl py-10 text-center;
+}
+
+.auth-form {
+  @apply flex flex-col items-center;
+}
+
+.auth-form__label {
+  @apply block mb-1;
+}
+
+.auth-form__input {
+  @apply border border-gray-300 rounded-md p-2 mb-4 w-64 transition-colors dark:bg-primary-800 dark:border-primary-600 dark:text-secondary;
+}
+
+.auth-form__input--error {
+  @apply border-red-500;
+}
+
+.auth-form__input--disabled {
+  @apply bg-gray-100 cursor-not-allowed dark:bg-primary-600;
+}
+
+.auth-form__error {
+  @apply text-red-500 text-sm mb-2;
+}
+
+.auth-form__submit {
+  @apply bg-accent hover:bg-accent-500 text-white py-2 px-4 rounded transition-all;
+}
+
+.auth-form__submit--loading {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.auth__success-message {
+  @apply text-green-500 text-center mt-4;
+}
+
+.auth__footer {
+  @apply py-20 text-center;
+}
+
+.auth__home-link {
+  @apply bg-secondary hover:bg-secondary-100 text-primary py-2 px-4 rounded transition-all;
+}

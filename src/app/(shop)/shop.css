@@ -1,0 +1,598 @@
+@import "../globals.css";
+
+
+/* Tienda */
+
+/* Layout.tsx */
+
+.shop-layout {
+  @apply min-h-screen;
+}
+
+.shop-layout__content {
+  @apply px-0 sm:px-10;
+}
+
+/* Principal */
+
+.page-container {
+  @apply flex justify-center items-center mb-72 px-10 sm:px-0;
+}
+
+.page-container__inner {
+  @apply flex flex-col w-[1000px];
+}
+
+.page-container__grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-10;
+}
+
+.page-section {
+  @apply flex flex-col mt-5;
+}
+
+.page-section__title {
+  @apply text-xl;
+}
+
+.page-section__link {
+  @apply underline mb-5;
+}
+
+
+.card {
+  @apply bg-white rounded-xl shadow-xl p-7 dark:bg-primary-900 dark:shadow-primary-800;
+}
+
+.card--fit {
+  @apply h-fit;
+}
+
+.card__title {
+  @apply text-2xl mb-2;
+}
+
+.card__divider {
+  @apply w-full h-0.5 rounded bg-gray-200 mb-10 dark:bg-primary-600;
+}
+
+.card__content {
+  @apply mb-10;
+}
+
+.card__footer {
+  @apply mt-5 mb-2 w-full;
+}
+
+/* Order Summary */
+
+.order-summary {
+  @apply grid grid-cols-2;
+}
+
+.order-summary__label {
+  @apply text-left;
+}
+
+.order-summary__value {
+  @apply text-right;
+}
+
+.order-summary__total-label {
+  @apply mt-5 text-2xl;
+}
+
+.order-summary__total-value {
+  @apply mt-5 text-2xl text-right;
+}
+
+/* Product Item (en cart/orders) */
+
+.cart-item {
+  @apply flex mb-5;
+}
+
+.cart-item--detailed {
+  @apply p-4 bg-gray-50 rounded-lg;
+}
+
+.cart-item__image {
+  @apply mr-5 rounded w-[100px] h-[100px] object-cover;
+}
+
+.cart-item__info {
+  @apply flex-1;
+}
+
+.cart-item__title {
+  @apply font-semibold;
+}
+
+.cart-item__title--link {
+  @apply hover:underline cursor-pointer;
+}
+
+.cart-item__price {
+  @apply text-sm text-gray-600;
+}
+
+.cart-item__subtotal {
+  @apply font-bold;
+}
+
+.cart-item__config {
+  @apply text-sm text-gray-500;
+}
+
+.cart-item__remove {
+  @apply underline mt-3 cursor-pointer;
+}
+
+.cart-item__deployment {
+  @apply mt-2;
+}
+
+/* Empty State */
+
+.empty-state {
+  @apply flex justify-center items-center h-[800px];
+}
+
+.empty-state__icon {
+  @apply mx-5;
+}
+
+.empty-state__content {
+  @apply flex flex-col items-center;
+}
+
+.empty-state__title {
+  @apply text-xl font-semibold;
+}
+
+.empty-state__link {
+  @apply text-accent mt-2 text-4xl text-center;
+}
+
+/* Product Detail */
+
+.product-detail {
+  @apply mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3;
+}
+
+.product-detail__gallery {
+  @apply col-span-1 md:col-span-2;
+}
+
+.product-detail__info {
+  @apply col-span-1 px-5;
+}
+
+.product-detail__title {
+  @apply antialiased font-bold text-xl;
+}
+
+.product-detail__price {
+  @apply text-lg mb-5;
+}
+
+.product-detail__description-title {
+  @apply font-bold text-sm;
+}
+
+.product-detail__description {
+  @apply font-light;
+}
+
+/* Pagina de perfil */
+
+.profile {
+  @apply max-w-4xl mx-auto px-4 py-8;
+}
+
+.profile__subtitle {
+  @apply mb-6;
+}
+
+.profile__card {
+  @apply bg-white rounded-lg shadow-md p-6 dark:bg-primary-900;
+}
+
+.profile__header {
+  @apply flex items-center gap-6 mb-6;
+}
+
+.profile__avatar {
+  @apply w-24 h-24 rounded-full bg-gray-400 flex items-center justify-center text-white text-3xl font-bold dark:bg-primary-600;
+}
+
+.profile__user-info {
+  @apply flex-1;
+}
+
+.profile__name {
+  @apply text-2xl font-bold text-gray-800 mb-1 dark:text-secondary;
+}
+
+.profile__email {
+  @apply text-gray-600 dark:text-secondary-400;
+}
+
+.profile__details {
+  @apply border-t pt-6 dark:border-primary-600;
+}
+
+.profile__details-title {
+  @apply text-lg font-semibold text-gray-800 mb-4 dark:text-secondary;
+}
+
+.profile__details-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.profile__detail-item {
+  @apply bg-gray-50 p-4 rounded-lg dark:bg-primary-800;
+}
+
+.profile__detail-label {
+  @apply text-sm text-gray-600 mb-1 dark:text-secondary-400;
+}
+
+.profile__detail-value {
+  @apply text-gray-800 font-medium dark:text-secondary;
+}
+
+.profile__detail-value--verified {
+  @apply text-green-600;
+}
+
+.profile__detail-value--unverified {
+  @apply text-orange-600;
+}
+
+.profile__detail-value--small {
+  @apply text-sm;
+}
+
+/* Tablas */
+
+.data-table {
+  @apply min-w-full overflow-hidden;
+}
+
+.data-table__head {
+  @apply bg-gray-200 dark:bg-primary-800;
+}
+
+.data-table__th {
+  @apply text-sm font-medium text-gray-900 px-6 py-4 text-left dark:text-secondary;
+}
+
+.data-table__row {
+  @apply bg-white transition duration-300 ease-in-out hover:bg-gray-100 dark:bg-primary-900 dark:hover:bg-primary-800;
+}
+
+.data-table__cell {
+  @apply text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap dark:text-secondary;
+}
+
+.data-table__cell--bold {
+  @apply font-bold;
+}
+
+.data-table__cell--medium {
+  @apply font-medium;
+}
+
+.data-table__cell--truncate {
+  @apply max-w-xs truncate;
+}
+
+.data-table__cell--status {
+  @apply flex items-center;
+}
+
+.data-table__link {
+  @apply hover:underline;
+}
+
+.data-table__status--paid {
+  @apply text-green-800;
+}
+
+.data-table__status--unpaid {
+  @apply text-red-800;
+}
+
+.data-table__status-text {
+  @apply mx-2;
+}
+
+/* Address */
+
+.address-page {
+  @apply flex flex-col sm:justify-center sm:items-center mb-72 px-10 sm:px-0;
+}
+
+.address-page__inner {
+  @apply w-full xl:w-[1000px] flex flex-col justify-center text-left;
+}
+
+.address-form {
+  @apply grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2;
+}
+
+.address-form__field {
+  @apply flex flex-col mb-2;
+}
+
+.address-form__label {
+  @apply block;
+}
+
+.address-form__input {
+  @apply p-2 rounded-md bg-gray-200 dark:bg-primary-800 dark:text-secondary dark:border dark:border-primary-600;
+}
+
+.address-form__checkbox-wrapper {
+  @apply inline-flex items-center mb-10;
+}
+
+.address-form__checkbox-label {
+  @apply relative flex cursor-pointer items-center rounded-full p-3;
+}
+
+.address-form__checkbox {
+  @apply relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-secondary-200 transition-all checked:border-accent checked:bg-accent hover:before:opacity-10;
+}
+
+.address-form__checkbox-icon {
+  @apply pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100;
+}
+
+/* Checkout */
+
+.checkout-terms {
+  @apply mb-5;
+}
+
+.checkout-terms__text {
+  @apply text-xs;
+}
+
+.checkout-terms__link {
+  @apply underline;
+}
+
+.checkout-error {
+  @apply text-red-500 mb-5;
+}
+
+/* Pagina de Admin */
+
+.admin-container {
+  @apply flex flex-col md:flex-row justify-center my-20 mx-4 gap-4 sm:gap-8 text-center;
+}
+
+/* Deployment */
+
+.deployment-badge {
+  @apply flex flex-col gap-1;
+}
+
+.deployment-badge__status {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.deployment-badge__status--pending {
+  @apply bg-gray-100 text-gray-700;
+}
+
+.deployment-badge__status--deployed {
+  @apply bg-green-100 text-green-700;
+}
+
+.deployment-badge__status--failed {
+  @apply bg-red-100 text-red-700;
+}
+
+.deployment-badge__icon {
+  @apply w-4 h-4;
+}
+
+.deployment-badge__link {
+  @apply text-sm text-accent hover:underline flex items-center gap-1;
+}
+
+.deployment-actions {
+  @apply mt-3 flex flex-col gap-2;
+}
+
+.deployment-actions__error {
+  @apply text-xs text-red-500;
+}
+
+.deployment-actions__button {
+  @apply flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors;
+}
+
+.deployment-actions__button--delete {
+  @apply bg-red-100 text-red-700 hover:bg-red-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.deployment-actions__icon {
+  @apply w-3.5 h-3.5;
+}
+
+.deployment-actions__icon--loading {
+  @apply animate-pulse;
+}
+
+/* Product Form (Admin) */
+
+.product-form {
+  @apply grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3;
+}
+
+.product-form__column {
+  @apply w-full;
+}
+
+.product-form__images {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-3;
+}
+
+/* Configure Page */
+
+.configure-page {
+  @apply container mx-auto px-4 py-8;
+}
+
+.configure-page__title {
+  @apply text-3xl font-bold mb-2;
+}
+
+.configure-page__subtitle {
+  @apply text-gray-600 mb-8;
+}
+
+.configure-page__grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+}
+
+.configure-sidebar {
+  @apply lg:col-span-1;
+}
+
+.configure-sidebar__card {
+  @apply bg-gray-50 rounded-lg p-6 sticky top-4 dark:bg-primary-900;
+}
+
+.configure-sidebar__image {
+  @apply rounded-lg w-full mb-4;
+}
+
+.configure-sidebar__title {
+  @apply font-bold text-xl mb-2;
+}
+
+.configure-sidebar__description {
+  @apply text-gray-600 text-sm mb-4;
+}
+
+.configure-sidebar__price-section {
+  @apply border-t pt-4;
+}
+
+.configure-sidebar__price {
+  @apply font-bold text-2xl text-accent;
+}
+
+.configure-sidebar__price-note {
+  @apply text-sm text-gray-500;
+}
+
+.configure-sidebar__features {
+  @apply border-t mt-4 pt-4;
+}
+
+.configure-sidebar__features-title {
+  @apply font-semibold mb-2;
+}
+
+.configure-sidebar__features-list {
+  @apply text-sm text-gray-600 space-y-1;
+}
+
+.configure-sidebar__feature-item {
+  @apply flex items-center gap-2;
+}
+
+.configure-sidebar__feature-icon {
+  @apply text-green-500;
+}
+
+.configure-sidebar__demo-link {
+  @apply block mt-4 text-center text-accent hover:underline text-sm;
+}
+
+.configure-form-container {
+  @apply lg:col-span-2;
+}
+
+.configure-form {
+  @apply space-y-8;
+}
+
+.configure-form__section {
+  @apply bg-white dark:bg-primary-900 rounded-lg border border-secondary-200 dark:border-primary-600 p-6;
+}
+
+.configure-form__section-title {
+  @apply font-bold text-lg mb-4 text-gray-800;
+}
+
+.configure-form__fields {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+
+.configure-form__field--full {
+  @apply md:col-span-2;
+}
+
+.configure-form__label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.configure-form__required {
+  @apply text-red-500 ml-1;
+}
+
+.configure-form__input {
+  @apply w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-primary-800 dark:text-secondary dark:border-primary-600 dark:focus:ring-accent;
+}
+
+.configure-form__input--error {
+  @apply border-red-500;
+}
+
+.configure-form__input--default {
+  @apply border-gray-300 dark:border-primary-600;
+}
+
+.configure-form__color-wrapper {
+  @apply flex items-center gap-3;
+}
+
+.configure-form__color-picker {
+  @apply w-12 h-12 rounded cursor-pointer border-0;
+}
+
+.configure-form__description {
+  @apply mt-1 text-xs text-gray-500;
+}
+
+.configure-form__error {
+  @apply mt-1 text-xs text-red-500;
+}
+
+.configure-form__actions {
+  @apply flex justify-end gap-4;
+}
+
+.configure-form__btn-cancel {
+  @apply px-6 py-3 border border-secondary-200 rounded-lg hover:bg-secondary-100 transition-colors;
+}
+
+.configure-form__btn-submit {
+  @apply px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-500 transition-colors font-semibold;
+}
+
+.loading {
+  @apply text-center py-4;
+}
+
+.no-results {
+  @apply font-bold text-center text-2xl py-20;
+}
